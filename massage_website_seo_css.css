@@ -317,6 +317,18 @@ section {
   margin-bottom: var(--space-12);
 }
 
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr); /* two columns on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: 1fr; /* stack all in one column on phones */
+  }
+}
+
 .footer-section h3,
 .footer-section h4,
 .footer-section h5 {
