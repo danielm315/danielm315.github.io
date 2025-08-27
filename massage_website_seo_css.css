@@ -58,19 +58,15 @@ section {
 
 /* ===== BOOKING SECTION ===== /
 / Fix mobile centering /
-/ On smaller screens, shrink gracefully /
-@media (max-width: 480px) {
-  .booking-options {
-    grid-template-columns: 1fr;   / stack them /
-    justify-items: center;        / center cards horizontally /
-  }
+/ On smaller screens, shrink gracefully */
+@media (max-width: 768px) {
   .booking-card {
-    width: 100%;                  / allow full width /
-    max-width: 360px;             / but cap it /
-    margin: 0 auto;               / force equal space left + right /
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;                       
   }
 }
-/ Attempt at Fixing the booking-cards margins on mobile */
+/* Attempt at Fixing the booking-cards margins on mobile */
 .booking-section {
   background: var(--gradient-hero);
   color: var(--white);
