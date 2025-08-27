@@ -821,7 +821,7 @@ p {
 
 @media (max-width: 480px) {
   .hero-stats {
-    margin: 10px;
+    margin: 0 5px;
   }
 }
 .stat-number {
