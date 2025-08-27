@@ -808,6 +808,8 @@ p {
   justify-content: center;
   gap: var(--space-8);
   margin-bottom: var(--space-12);
+  margin-left: var(--space-12);
+  margin-right: var(--space-12);
 }
 
 .stat-item {
