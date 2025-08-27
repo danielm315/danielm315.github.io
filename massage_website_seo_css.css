@@ -60,7 +60,7 @@ section {
 / Fix mobile centering /
 / On smaller screens, shrink gracefully */
 @media (max-width: 768px) {
-  .booking-options {
+  .booking-card {
     margin-left: 0;
     margin-right: 0;                      
   }
