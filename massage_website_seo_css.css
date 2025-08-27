@@ -759,53 +759,54 @@ p {
 
 /* ===== HERO SECTION ===== */
 /* Add to your existing CSS - Mobile fix for hero stats */
-/* AGGRESSIVE DEBUG & FIX - Try this first to see if it works */
+/* Mobile fix for hero stats - keep horizontal layout */
 @media (max-width: 768px) {
   .hero-section .hero-stats {
     padding-left: 20px !important;
     padding-right: 20px !important;
-    gap: 15px !important;
-    flex-wrap: wrap !important;
+    gap: 10px !important; /* Reduce gap to fit better */
+    flex-wrap: nowrap !important; /* Keep in one row */
   }
   
   .hero-section .stat-item {
-    flex: 1 1 auto !important;
-    min-width: 0 !important;
+    flex: 1 1 0 !important; /* Equal width items */
+    min-width: 0 !important; /* Allow shrinking */
+    padding: var(--space-4) var(--space-2) !important; /* Reduce padding */
     box-sizing: border-box !important;
+  }
+  
+  /* Make text smaller on mobile */
+  .hero-section .stat-number {
+    font-size: 2rem !important; /* Smaller than 3rem */
+  }
+  
+  .hero-section .stat-label {
+    font-size: 0.75rem !important; /* Smaller text */
   }
 }
 
-/* For very small screens */
-@media (max-width: 480px) {
+/* Only stack vertically on very tiny screens if needed */
+@media (max-width: 360px) {
   .hero-section .hero-stats {
     flex-direction: column !important;
     align-items: center !important;
-    padding: 0 25px !important;
   }
   
   .hero-section .stat-item {
     width: 100% !important;
     max-width: 250px !important;
   }
-}
-@media (max-width: 480px) {
-  .hero-stats {
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-4);
-    padding: 0 20px;
+  
+  /* Restore normal text size when stacked */
+  .hero-section .stat-number {
+    font-size: 3rem !important;
   }
   
-  .stat-item {
-    width: 100%;
-    max-width: 200px; /* Prevent them from being too wide */
+  .hero-section .stat-label {
+    font-size: 0.875rem !important;
   }
 }
-@media (max-width: 768px) {
-  .hero-stats {
-    background: red !important;
-  }
-}
+
 .hero-section {
   min-height: 100vh;
   display: flex;
