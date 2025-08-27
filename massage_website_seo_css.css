@@ -58,23 +58,7 @@ section {
 
 /* ===== BOOKING SECTION ===== */
 /* Mobile responsive fixes */
-@media (max-width: 480px) {
-  .booking-options {
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
-    /* Remove any auto margins that might be causing issues */
-    margin-left: 0;
-    margin-right: 0;
-  }
-  
-  .booking-card {
-    /* Ensure cards take full available width with consistent padding */
-    width: 100%;
-    margin: 0;
-    /* Reduce padding slightly on mobile if needed */
-    padding: var(--space-8);
-  }
-}
+
 
 /* Attempt at Fixing the booking-cards margins on mobile */
 .booking-section {
