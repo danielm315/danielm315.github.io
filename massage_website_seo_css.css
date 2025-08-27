@@ -820,7 +820,7 @@ p {
 }
 
 @media (max-width: 480px) {
-  .stat-item {
+  .hero-content .container {
     margin: 10px;
   }
 }
