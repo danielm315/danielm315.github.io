@@ -58,58 +58,11 @@ section {
 
 /* ===== BOOKING SECTION ===== */
 
-/* Mobile fix - override the grid behavior */
-@media (max-width: 480px) {
-  .booking-section {
-    border: 2px solid red !important;
-  }
-  
-  .container {
-    border: 2px solid blue !important;
-  }
-  
-  .booking-options {
-    border: 2px solid green !important;
-  }
-  
-  .booking-card {
-    border: 2px solid yellow !important;
-  }
-}
-@media (max-width: 480px) {
-  .booking-section {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  
-  .booking-section .container {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    max-width: 100% !important;
-  }
-  
-  .booking-options {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: var(--space-6) !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  
-  .booking-card {
-    width: 100% !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-  }
-}
-
-/* Attempt at Fixing the booking-cards margins on mobile */
 .booking-section {
   background: var(--gradient-hero);
   color: var(--white);
 }
+
 .booking-options {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -117,6 +70,7 @@ section {
   max-width: 900px;
   margin: 0 auto;
 }
+
 .booking-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
@@ -126,40 +80,49 @@ section {
   text-align: center;
   transition: var(--transition-base);
 }
+
 .booking-card.primary {
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.3);
 }
+
 .booking-card:hover {
   transform: translateY(-8px);
   background: rgba(255, 255, 255, 0.2);
 }
+
 .booking-icon {
   font-size: 4rem;
   margin-bottom: var(--space-6);
   display: block;
 }
+
 .booking-card h3 {
   color: var(--white);
   margin-bottom: var(--space-4);
 }
+
 .booking-card p {
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: var(--space-8);
 }
+
 .booking-features {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
   margin-top: var(--space-6);
 }
+
 .booking-features span {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.875rem;
 }
+
 #booking-title, #makewhite {
     color: white;
 }
+
 .phone-btn {
   background: rgba(255, 255, 255, 0.2);
   color: var(--white);
@@ -167,9 +130,40 @@ section {
   font-size: 1.25rem;
   font-weight: 700;
 }
+
 .phone-btn:hover {
   background: var(--white);
   color: var(--primary-blue);
+}
+
+/* Mobile responsive fixes - higher specificity to override container styles */
+@media (max-width: 480px) {
+  .booking-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .booking-section .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+  
+  .booking-section .booking-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .booking-section .booking-card {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
 }
 
 /* ===== LOCATIONS SECTION ===== */
