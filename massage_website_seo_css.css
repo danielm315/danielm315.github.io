@@ -57,6 +57,19 @@ section {
 }
 
 /* ===== BOOKING SECTION ===== */
+/* Fix mobile centering */
+@media (max-width: 480px) {
+  .booking-options {
+    grid-template-columns: 1fr; /* single column */
+    justify-items: center;      /* center cards horizontally */
+  }
+
+  .booking-card {
+    width: 100%;                /* allow it to shrink with screen */
+    max-width: 350px;           /* keep it looking clean */
+  }
+}
+/* Attempt at Fixing the booking-cards margins on mobile */
 .booking-section {
   background: var(--gradient-hero);
   color: var(--white);
