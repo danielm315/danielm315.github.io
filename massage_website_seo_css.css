@@ -76,17 +76,6 @@ section {
   }
 }
 
-/* Tablet breakpoint for better medium screen handling */
-@media (max-width: 768px) and (min-width: 481px) {
-  .booking-options {
-    grid-template-columns: 1fr;
-    gap: var(--space-8);
-  }
-  
-  .booking-card {
-    max-width: 500px;
-    margin: 0 auto;
-  }
 /* Attempt at Fixing the booking-cards margins on mobile */
 .booking-section {
   background: var(--gradient-hero);
