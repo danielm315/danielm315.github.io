@@ -62,8 +62,7 @@ section {
 @media (max-width: 768px) {
   .booking-card {
     margin-left: auto;
-    margin-right: auto;
-    max-width: 90%;                       
+    margin-right: auto;                      
   }
 }
 /* Attempt at Fixing the booking-cards margins on mobile */
