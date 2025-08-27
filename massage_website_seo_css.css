@@ -820,7 +820,7 @@ p {
 }
 
 @media (max-width: 480px) {
-  .hero-content .container {
+  .hero-stats {
     margin: 10px;
   }
 }
