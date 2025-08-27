@@ -65,9 +65,11 @@ section {
     justify-items: center;        /* center cards horizontally */
   }
 
+
   .booking-card {
-    width: 90%;                   /* responsive width */
-    max-width: 360px;             /* don’t let them get too wide */
+    width: 100%;                  /* allow full width */
+    max-width: 360px;             /* but cap it */
+    margin: 0 auto;               /* force equal space left + right */
   }
 }
 /* Attempt at Fixing the booking-cards margins on mobile */
