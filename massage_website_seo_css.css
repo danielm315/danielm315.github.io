@@ -59,16 +59,31 @@ section {
 /* ===== BOOKING SECTION ===== /
 /* Mobile fix - override the grid behavior */
 @media (max-width: 480px) {
+  .booking-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .booking-section .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+  }
+  
   .booking-options {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-6);
-    /* This ensures equal spacing on both sides */
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--space-6) !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
   .booking-card {
-    width: 100%;
-    margin: 0;
+    width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
   }
 }
 
