@@ -61,8 +61,8 @@ section {
 / On smaller screens, shrink gracefully */
 @media (max-width: 768px) {
   .booking-options {
-    margin-left: auto;
-    margin-right: auto;                      
+    margin-left: 0;
+    margin-right: 0;                      
   }
 }
 /* Attempt at Fixing the booking-cards margins on mobile */
