@@ -56,16 +56,25 @@ section {
   margin-bottom: 0;
 }
 
-/* ===== BOOKING SECTION ===== */
-/* Mobile responsive fixes */
-
-
-/* Attempt at Fixing the booking-cards margins on mobile */
+/* ===== BOOKING SECTION ===== /
+/ Fix mobile centering /
+/ On smaller screens, shrink gracefully /
+@media (max-width: 480px) {
+  .booking-options {
+    grid-template-columns: 1fr;   / stack them /
+    justify-items: center;        / center cards horizontally /
+  }
+  .booking-card {
+    width: 100%;                  / allow full width /
+    max-width: 360px;             / but cap it /
+    margin: 0 auto;               / force equal space left + right /
+  }
+}
+/ Attempt at Fixing the booking-cards margins on mobile */
 .booking-section {
   background: var(--gradient-hero);
   color: var(--white);
 }
-
 .booking-options {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -73,7 +82,6 @@ section {
   max-width: 900px;
   margin: 0 auto;
 }
-
 .booking-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
@@ -83,40 +91,33 @@ section {
   text-align: center;
   transition: var(--transition-base);
 }
-
 .booking-card.primary {
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.3);
 }
-
 .booking-card:hover {
   transform: translateY(-8px);
   background: rgba(255, 255, 255, 0.2);
 }
-
 .booking-icon {
   font-size: 4rem;
   margin-bottom: var(--space-6);
   display: block;
 }
-
 .booking-card h3 {
   color: var(--white);
   margin-bottom: var(--space-4);
 }
-
 .booking-card p {
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: var(--space-8);
 }
-
 .booking-features {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
   margin-top: var(--space-6);
 }
-
 .booking-features span {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.875rem;
@@ -131,7 +132,6 @@ section {
   font-size: 1.25rem;
   font-weight: 700;
 }
-
 .phone-btn:hover {
   background: var(--white);
   color: var(--primary-blue);
