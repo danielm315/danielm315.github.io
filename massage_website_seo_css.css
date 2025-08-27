@@ -801,6 +801,11 @@ p {
     max-width: 200px; /* Prevent them from being too wide */
   }
 }
+@media (max-width: 768px) {
+  .hero-stats {
+    background: red !important;
+  }
+}
 .hero-section {
   min-height: 100vh;
   display: flex;
