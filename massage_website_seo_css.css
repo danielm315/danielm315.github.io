@@ -820,7 +820,7 @@ p {
 }
 
 @media (max-width: 480px) {
-  .stat-itmem {
+  .stat-item {
     margin: 10px;
   }
 }
