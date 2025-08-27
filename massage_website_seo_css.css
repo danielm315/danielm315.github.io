@@ -56,8 +56,26 @@ section {
   margin-bottom: 0;
 }
 
-/* ===== BOOKING SECTION ===== /
+/* ===== BOOKING SECTION ===== */
+
 /* Mobile fix - override the grid behavior */
+@media (max-width: 480px) {
+  .booking-section {
+    border: 2px solid red !important;
+  }
+  
+  .container {
+    border: 2px solid blue !important;
+  }
+  
+  .booking-options {
+    border: 2px solid green !important;
+  }
+  
+  .booking-card {
+    border: 2px solid yellow !important;
+  }
+}
 @media (max-width: 480px) {
   .booking-section {
     padding-left: 0 !important;
