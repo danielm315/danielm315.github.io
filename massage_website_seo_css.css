@@ -57,14 +57,21 @@ section {
 }
 
 /* ===== BOOKING SECTION ===== /
-/ Fix mobile centering /
-/ On smaller screens, shrink gracefully */
-@media (max-width: 768px) {
+/* Mobile fix - override the grid behavior */
+@media (max-width: 480px) {
+  .booking-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    /* This ensures equal spacing on both sides */
+  }
+  
   .booking-card {
-    margin-left: 0;
-    margin-right: 0;                      
+    width: 100%;
+    margin: 0;
   }
 }
+
 /* Attempt at Fixing the booking-cards margins on mobile */
 .booking-section {
   background: var(--gradient-hero);
