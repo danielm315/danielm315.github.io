@@ -759,20 +759,35 @@ p {
 
 /* ===== HERO SECTION ===== */
 /* Add to your existing CSS - Mobile fix for hero stats */
+/* AGGRESSIVE DEBUG & FIX - Try this first to see if it works */
 @media (max-width: 768px) {
-  .hero-stats {
-    padding: 0 15px; /* Adds 15px padding on left and right */
-    flex-wrap: wrap; /* Allow wrapping if needed on very small screens */
-    gap: var(--space-4); /* Reduce gap slightly on mobile */
+  .hero-section .hero-stats {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    gap: 15px !important;
+    flex-wrap: wrap !important;
   }
   
-  .stat-item {
-    flex: 1; /* Make items grow to fill space evenly */
-    min-width: 0; /* Allow shrinking below content width */
+  .hero-section .stat-item {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
   }
 }
 
-/* For very small screens, stack vertically */
+/* For very small screens */
+@media (max-width: 480px) {
+  .hero-section .hero-stats {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0 25px !important;
+  }
+  
+  .hero-section .stat-item {
+    width: 100% !important;
+    max-width: 250px !important;
+  }
+}
 @media (max-width: 480px) {
   .hero-stats {
     flex-direction: column;
